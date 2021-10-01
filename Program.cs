@@ -7,8 +7,9 @@ namespace Module_4
           
         static void Main()
         {
-            string A,B;
-            bool C = A != B;
+            int A,B;
+            double X, Y;
+            bool C = (A < B) | (X > Y);
 
        
             Console.WriteLine("C = " + C);
