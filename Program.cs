@@ -7,11 +7,17 @@ namespace Module_4
           
         static void Main()
         {
-            var inv = true;
-            var result = !inv;
+			var a = 7;
+			var b = 7;
 
-
-            Console.WriteLine("result = " + result);
-        }
+			if (a == b)
+			{
+				Console.WriteLine("Условие истинно");
+			}
+			else
+			{
+				Console.WriteLine("Условие ложно");
+			}
+		}
     }
 }
