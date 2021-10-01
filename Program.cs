@@ -8,7 +8,7 @@ namespace Module_4
         static void Main()
         {
 			Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
-
+			 
 			var color = Console.ReadLine();
 
 			if (color == "red")
