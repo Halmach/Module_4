@@ -4,9 +4,14 @@ namespace Module_4
 {
     class Program
     {
-        static void Main(string[] args)
+          
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            string A,B;
+            bool C = A != B;
+
+       
+            Console.WriteLine("C = " + C);
         }
     }
 }
