@@ -7,12 +7,11 @@ namespace Module_4
           
         static void Main()
         {
-            int A,B;
-            double X, Y;
-            bool C = (A < B) | (X > Y);
+            var inv = true;
+            var result = !inv;
 
-       
-            Console.WriteLine("C = " + C);
+
+            Console.WriteLine("result = " + result);
         }
     }
 }
