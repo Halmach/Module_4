@@ -11,10 +11,12 @@ namespace Module_4
 
             //var color = Console.ReadLine();
             int t = 0;
+            string text = "";
             do
             {
                 Console.WriteLine("Iteration {0}", t);
-                switch (Console.ReadLine())
+              
+                switch (text)
                 {
                     case "red":
                         Console.BackgroundColor = ConsoleColor.Red;
@@ -44,8 +46,15 @@ namespace Module_4
                         break;
                 }
                 t++;
+                text = Console.ReadLine();
+                if (text == "stop")
+                {
+                    Console.WriteLine("Цикл остановлен");
+                    break;
+                }
+
             }
-            while (t < 0);
+            while (true);
         }
     }
 }
