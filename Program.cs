@@ -7,54 +7,28 @@ namespace Module_4
           
         static void Main()
         {
-			Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            int sum = 0;
 
-            //var color = Console.ReadLine();
-            int t = 0;
-            string text = "";
-            do
+            while (true)
             {
-                Console.WriteLine("Iteration {0}", t);
-              
-                switch (text)
+                Console.WriteLine("Введите число");
+                var number = Convert.ToInt32(Console.ReadLine());
+
+                if (number < 0)
                 {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is red!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is green!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is cyan!");
-                        break;
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Your color is yellow!");
-                        break;
+                    continue;
                 }
-                t++;
-                text = Console.ReadLine();
-                if (text == "stop")
+                else if (number == 0)
                 {
-                    Console.WriteLine("Цикл остановлен");
                     break;
                 }
 
+                // number > 0
+                sum += number;
             }
-            while (true);
+
+            Console.WriteLine("Итоговая сумма: {0}", sum);
         }
     }
+    
 }
