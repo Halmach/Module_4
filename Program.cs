@@ -45,7 +45,7 @@ namespace Module_4
                 }
                 t++;
             }
-            while (t < 3);
+            while (t < 0);
         }
     }
 }
