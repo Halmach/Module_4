@@ -7,17 +7,13 @@ namespace Module_4
           
         static void Main()
         {
-            int[][] array = new int[3][];
-            array[0] = new int[2] { 1, 2 };
-            array[1] = new int[3] { 1, 2, 3 };
-            array[2] = new int[5] { 1, 2, 3, 4, 5 };
-            foreach(var item in array)
+            int[] numbers = new int[5] { -1, -100, 40, 20, 10 };
+            int num = 0;
+            foreach(var item in numbers)
             {
-                foreach(var underItem in item)
-                {
-                    Console.Write(underItem + " ");
-                }
+                num = (item > 0) ? num + 1: num;
             }
+            Console.WriteLine("Количество положительных чисел: " + num);
 
         }
     }
