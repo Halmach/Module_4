@@ -7,15 +7,21 @@ namespace Module_4
           
         static void Main()
         {
-            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
-            for(int i = 0; i < array.GetUpperBound(1) + 1; i++)
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int i = 1,j = 2;
+            while(i < arr.Length)
             {
-                for(int j = 0; j <array.GetUpperBound(0) + 1; j++)
+                if(arr[i-1] <= arr[i]) { i = j; j++;}
+                else
                 {
-                    Console.Write(array[j, i] + " ");
+                    int t = arr[i];
+                    arr[i] = arr[i - 1];
+                    arr[i - 1] = t;
+                    i--;
+                    if(i == 0) { i = j; j++;}
                 }
-                Console.WriteLine();
             }
+            foreach (var arrItem in arr) Console.Write(arrItem + " ");
             //Console.WriteLine("Последняя буква вашего имени: " + name[name.Length - 1]);
 
         }
