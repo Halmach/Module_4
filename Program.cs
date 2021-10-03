@@ -6,14 +6,11 @@ namespace Module_4
     {
           
         static void Main()
-        {     
-            Console.WriteLine("Введите свое имя");
-            var name = (Console.ReadLine());
-            Console.WriteLine("Ваше имя по буквам в обратном порядке:");
-            var chNum = name.Length;
-            for(int i = chNum - 1; i >= 0; i --)
+        {
+            int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+            foreach (var item in array)
             {
-                Console.Write(name[i] + " ");
+                Console.Write(item + " ");
             }
             //Console.WriteLine("Последняя буква вашего имени: " + name[name.Length - 1]);
 
