@@ -6,28 +6,16 @@ namespace Module_4
     {
           
         static void Main()
-        {
-            int sum = 0;
-
-            while (true)
+        {     
+            Console.WriteLine("Введите свое имя");
+            var name = Console.ReadLine();
+            Console.WriteLine("Ваше имя по буквам:");
+            foreach (var character in name)
             {
-                Console.WriteLine("Введите число");
-                var number = Convert.ToInt32(Console.ReadLine());
-
-                if (number < 0)
-                {
-                    continue;
-                }
-                else if (number == 0)
-                {
-                    break;
-                }
-
-                // number > 0
-                sum += number;
+                Console.Write(character + " ");
             }
+            Console.WriteLine("Последняя буква вашего имени: " + name[name.Length - 1]);
 
-            Console.WriteLine("Итоговая сумма: {0}", sum);
         }
     }
     
