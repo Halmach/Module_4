@@ -7,12 +7,16 @@ namespace Module_4
           
         static void Main()
         {
-            int[] numbers = new int[5] { -1, -100, 40, 20, 10 };
+            int[,] numbers = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             int num = 0;
-            foreach(var item in numbers)
+            for (int i = 0; i < numbers.GetUpperBound(0) + 1; i++)
             {
-                num = (item > 0) ? num + 1: num;
-            }
+                for (int j = 0; j < numbers.GetUpperBound(1) + 1; j++)
+                {
+                    num = (numbers[i,j] > 0) ? num + 1 : num;
+                }
+            }  
+            
             Console.WriteLine("Количество положительных чисел: " + num);
 
         }
