@@ -18,7 +18,7 @@ namespace Module_4
             User.Surname = Console.ReadLine();
             Console.WriteLine("Введите логин");
             User.LogIn = Console.ReadLine();
-
+            User.LoginSize = User.LogIn.Length;
         }
 	}
 
