@@ -21,7 +21,21 @@ namespace Module_4
             User.LoginSize = User.LogIn.Length;
             Console.WriteLine("Есть ли у вас животные? Да или Нет");
             User.HasPet = (Console.ReadLine().ToLower() == "да") ? true : false;
-
+            Console.WriteLine("Введите возраст пользователя");
+            bool isCorrectAge = double.TryParse(Console.ReadLine(), out User.Age);
+            while(!isCorrectAge)
+            {
+                Console.WriteLine("Введите возраст пользователя");
+                isCorrectAge = double.TryParse(Console.ReadLine(), out User.Age);
+            }
+            User.FavColors = new string[3];
+            Console.WriteLine("Введите три любимых цвета пользователя");
+            Console.WriteLine();
+            for (int i = 0; i < User.FavColors.Length;i++)
+            {
+                Console.WriteLine("Введите любимый цвет №"+(i+1));
+                User.FavColors[i] = Console.ReadLine();
+            }
         }
 	}
 
