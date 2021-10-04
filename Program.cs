@@ -19,6 +19,9 @@ namespace Module_4
             Console.WriteLine("Введите логин");
             User.LogIn = Console.ReadLine();
             User.LoginSize = User.LogIn.Length;
+            Console.WriteLine("Есть ли у вас животные? Да или Нет");
+            User.HasPet = (Console.ReadLine().ToLower() == "да") ? true : false;
+
         }
 	}
 
